@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Study for BCS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Md.Shamim Reza">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body ng-app="myApp">
+    <!--section one header part-->
+    <section id="sec01">
+      <ul class="list01">
+        <li><a href="#/!"><span>Home</span></a></li>
+        <li><a href="#!recent"><span>recent</span></a></li>
+        <li><a href="#!bengla"><span>bangla</span></a></li>
+        <li><a href="#!math"><span>Math</span></a></li>
+        <li><a href="#!extra"><span>extra</span></a></li>
+      </ul>
+      <div class="link01">
+        <a href="javascript:void(0)"><span>link1</span></a>
+        <a href="javascript:void(0)"><span>link2</span></a>
+        <a href="javascript:void(0)"><span>link3</span></a>
+        <a href="javascript:void(0)"><span>link4</span></a>
+        <a href="javascript:void(0)"><span>link5</span></a>
+        <a href="javascript:void(0)"><span>link6</span></a>
+        <a href="javascript:void(0)"><span>link7</span></a>
+        <a href="javascript:void(0)"><span>link8</span></a>
+        <a href="javascript:void(0)"><span>link9</span></a>
+        <a href="javascript:void(0)"><span>link10</span></a>
+        <a href="javascript:void(0)"><span>link11</span></a>
+        <a href="javascript:void(0)"><span>link12</span></a>
+        <a href="javascript:void(0)"><span>link13</span></a>
+        <a href="javascript:void(0)"><span>link14</span></a>
+        <a href="javascript:void(0)"><span>link15</span></a>
+        <a href="javascript:void(0)"><span>link16</span></a>
+        <a href="javascript:void(0)"><span>link17</span></a>
+        <a href="javascript:void(0)"><span>link18</span></a>
+        <a href="javascript:void(0)"><span>link19</span></a>
+        <a href="javascript:void(0)"><span>link20</span></a>
+      </div>
+    </section>
+    <!--section two footer part-->
+    <section id="sec02" ng-view>
+
+    </section>
+
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+      var app = angular.module("myApp", ["ngRoute"]);
+      app.config(function($routeProvider) {
+          $routeProvider
+          .when("/", {
+              templateUrl : "home.html"
+          })
+          .when("/recent", {
+              templateUrl : "recent.html"
+          })
+          .when("/bengla", {
+              templateUrl : "bengla.html"
+          })
+          .when("/math", {
+              templateUrl : "math.html"
+          })
+          .when("/extra", {
+              templateUrl : "extra.html"
+          });
+      });
+</script>
+  </body>
+</html>

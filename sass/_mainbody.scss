@@ -1,0 +1,13 @@
+#sec02 {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: #ffffff;
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 60px;
+  padding-bottom: 50px;
+  @media screen and (max-width: 600px) {
+    width: 65%;
+  }
+}
